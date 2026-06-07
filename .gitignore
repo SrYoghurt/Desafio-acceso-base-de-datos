@@ -7,27 +7,27 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node and generated artifacts
 node_modules
 backend/node_modules
 backend/generated/prisma
-backend/.env
-backend/.env.*
-backend/generated/prisma
 backend/dist
-.vscode
-.DS_Store
-dist
-dist-ssr
-*.local
 
-# Environment
-# Keep environment variables out of version control
+# Git metadata
+backend/.git
+
+# Environment files
 .env
 .env.*
+backend/.env
+backend/.env.*
 
 # Generated files
 /generated/prisma
 generated/prisma
+dist
+dist-ssr
+*.local
 
 # Editor directories and files
 .vscode/*
