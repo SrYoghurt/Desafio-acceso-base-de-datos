@@ -8,6 +8,14 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+backend/node_modules
+backend/generated/prisma
+backend/.env
+backend/.env.*
+backend/generated/prisma
+backend/dist
+.vscode
+.DS_Store
 dist
 dist-ssr
 *.local
