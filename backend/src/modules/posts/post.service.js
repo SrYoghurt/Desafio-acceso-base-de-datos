@@ -17,3 +17,26 @@ export const createPost = async (datosPost) => {
     });
     return newPost;
 };
+
+export const deletePost = async (id) => {
+    const postBorrado = await prisma.post.delete({
+        where: {
+            id,
+        },
+    });
+    return postBorrado;
+};
+
+export const updateLikes = async (id) => {
+    const postActualizado = await prisma.post.update({
+        where: {
+            id
+        },
+        data: {
+            likes: {
+                increment: 1
+            }
+        }
+    });
+    return postActualizado;
+};

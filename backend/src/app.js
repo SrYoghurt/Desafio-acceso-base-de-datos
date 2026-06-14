@@ -11,5 +11,5 @@ app.get("/", (req, res) => {
     res.json({message: "API funcionando correctamente"});
 });
 
-app.use('/posts', postRoutes)
+app.use('/', postRoutes)
 export default app;

@@ -1,10 +1,15 @@
 import { Router } from "express";
-import { obtenerPosts, crearPost } from "./post.controller.js";
+import { obtenerPosts, crearPost, eliminarPost, actualizarLikes } from "./post.controller.js";
+import { updateLikes } from "./post.service.js";
 
 const router = Router();
 
-router.get('/', obtenerPosts);
+router.get('/posts', obtenerPosts);
 
-router.post('/', crearPost);
+router.post('/posts', crearPost);
+
+router.delete('/posts/:id', eliminarPost);
+
+router.put('/posts/like/:id', actualizarLikes);
 
 export default router;
